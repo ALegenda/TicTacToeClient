@@ -22,7 +22,7 @@ export class ChatService {
       return () => {
         this.socket.disconnect();
       };
-    })
+    });
     return observable;
   }
 }

@@ -1,6 +1,10 @@
-<div *ngFor="let message of messages">
-  {{message.date| date: 'M/d/yy'}} {{message.date| date: 'h:mm:ss'}}: {{message.text}}
+<div class="chat">
+<div class="container" *ngFor="let message of messages">
+  <p>{{message.text}}</p>
+  <span class="time-right">{{message.date| date: 'M/d/yy'}} {{message.date| date: 'h:mm:ss'}}</span>
+</div>
 </div>
 
 <input #chatInput (keyup.enter)="sendMessage()" [(ngModel)]="message" />
+
 <button (click)="sendMessage()">Send</button>
