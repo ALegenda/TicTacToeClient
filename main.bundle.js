@@ -169,14 +169,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/chat/chat.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "/* Chat containers */\r\n.container {\r\n  border: 2px solid #dedede;\r\n  background-color: #f1f1f1;\r\n  border-radius: 5px;\r\n  padding: 10px;\r\n  margin: 10px 0;\r\n}\r\n/* Clear floats */\r\n.container::after {\r\n  content: \"\";\r\n  clear: both;\r\n  display: table;\r\n}\r\n/* Style time text */\r\n.time-right {\r\n  float: right;\r\n  color: #aaa;\r\n}\r\n/* Style time text */\r\n.time-left {\r\n  float: left;\r\n  color: #999;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let message of messages\">\n  {{message.date| date: 'M/d/yy'}} {{message.date| date: 'h:mm:ss'}}: {{message.text}}\n</div>\n\n<input #chatInput (keyup.enter)=\"sendMessage()\" [(ngModel)]=\"message\" />\n<button (click)=\"sendMessage()\">Send</button>\n"
+module.exports = "<div class=\"chat\">\n<div class=\"container\" *ngFor=\"let message of messages\">\n  <p>{{message.text}}</p>\n  <span class=\"time-right\">{{message.date| date: 'M/d/yy'}} {{message.date| date: 'h:mm:ss'}}</span>\n</div>\n</div>\n\n<input #chatInput (keyup.enter)=\"sendMessage()\" [(ngModel)]=\"message\" />\n\n<button (click)=\"sendMessage()\">Send</button>\n"
 
 /***/ }),
 

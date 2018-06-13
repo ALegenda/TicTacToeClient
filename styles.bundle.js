@@ -3,7 +3,7 @@ webpackJsonp(["styles"],{
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);\n*, *:before, *:after {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\nbody {\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility;\n  font-family: 'Source Sans Pro', sans-serif;\n  font-weight: 400;\n  background-size: cover;\n  background: #f8f8f8;\n}\n/* You can add global styles to this file, and also import other style files */\n"
 
 /***/ }),
 
